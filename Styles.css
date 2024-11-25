@@ -1075,3 +1075,55 @@ h2.heading {
         font-size: 1.5rem;
     }
 }
+
+
+
+
+.Navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.Navbar.active {
+    display: block;
+}
+
+#menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #menu-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .Navbar {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .Navbar.active {
+        display: block;
+    }
+
+    .Navbar a {
+        display: block;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .Navbar a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+}
